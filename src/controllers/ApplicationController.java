@@ -1,9 +1,9 @@
 // ApplicationController.java
-package geonames.controllers;
+package controllers;
 
-import geonames.database.Database;
-import geonames.models.Place;
-import geonames.services.GeoNamesService;
+import database.Database;
+import models.Place;
+import services.GeoNamesService;
 
 import java.util.ArrayList;
 import java.util.List;

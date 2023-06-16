@@ -1,8 +1,8 @@
 // View.java
-package geonames.views;
+package views;
 
-import geonames.controllers.ApplicationController;
-import geonames.models.Place;
+import controllers.ApplicationController;
+import models.Place;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
