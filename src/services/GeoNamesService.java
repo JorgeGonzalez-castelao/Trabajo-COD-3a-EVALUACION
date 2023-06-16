@@ -1,6 +1,6 @@
-package geonames.services;
+package services;
 
-import geonames.models.Place;
+import models.Place;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

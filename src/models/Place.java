@@ -1,4 +1,4 @@
-package geonames.models;
+package models;
 
 public class Place {
     private int geonameId;
