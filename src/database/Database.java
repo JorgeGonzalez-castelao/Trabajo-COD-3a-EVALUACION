@@ -14,6 +14,10 @@ public class Database {
 
     private Connection connection;
 
+    /**
+     * Metodo para crear tablas en las cuales se insertan datos tales como el historial o los nombres pedidos
+     */
+
     public Database() {
         try {
             // Establecer la conexión con la base de datos
