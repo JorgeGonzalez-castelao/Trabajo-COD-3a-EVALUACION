@@ -38,6 +38,7 @@ public class View extends JFrame {
         createHistoryTable();
     }
 
+
     private JPanel createSearchPanel() {
         JPanel searchPanel = new JPanel();
         searchPanel.setLayout(new FlowLayout());
@@ -67,6 +68,11 @@ public class View extends JFrame {
         return searchPanel;
     }
 
+    /**
+     * Aplica la funcionalidad de agregar a favoritos mediante un Jbutton
+     * @param places Recibe Arraylist de tipo place
+     *
+     */
     private void displayPlaces(List<Place> places) {
         resultTextArea.setText("");
         if (places.isEmpty()) {
@@ -92,6 +98,9 @@ public class View extends JFrame {
         }
     }
 
+    /**
+     * metodo donde se guarda la informacion de Favoritos
+     */
     private void createFavoritesTable() {
         List<Place> favorites = controller.getFavorites();
         Object[][] data = new Object[favorites.size()][4];
@@ -113,7 +122,9 @@ public class View extends JFrame {
 
         add(favoritesPanel, BorderLayout.WEST);
     }
-
+    /**
+     * metodo donde se guarda la informacion de Historial
+     */
     private void createHistoryTable() {
         List<String> searchHistory = controller.getSearchHistory();
         Object[][] data = new Object[searchHistory.size()][1];

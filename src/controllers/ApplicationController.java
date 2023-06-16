@@ -15,6 +15,10 @@ public class ApplicationController {
     private List<String> searchHistory;
     private Database database;
 
+    /**
+     * Constructor
+     * @param username -> Nombre de usuario para acceder a la base de datos
+     */
     public ApplicationController(String username) {
         geoNamesService = new GeoNamesService(username);
         favorites = new ArrayList<>();

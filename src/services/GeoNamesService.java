@@ -19,6 +19,13 @@ public class GeoNamesService {
         this.username = username;
     }
 
+    /**
+     *
+     * @param query
+     * @param myLat mi latitud
+     * @param myLng mi longitus
+     * @return
+     */
     public List<Place> searchPlaces(String query, double myLat, double myLng) {
         List<Place> places = new ArrayList<>();
 
@@ -65,6 +72,11 @@ public class GeoNamesService {
         return places;
     }
 
+    /**
+     * metodo para conseguir un lugar
+     * @param geonameId usuario y contraseña para conectarse a la base de datos geoname
+     * @return lugar
+     */
     public Place getPlaceDetails(int geonameId) {
         try {
             String urlString = "http://api.geonames.org/getJSON?geonameId=" + geonameId + "&username=" + username;
@@ -102,6 +114,14 @@ public class GeoNamesService {
         return null;
     }
 
+    /**
+     * el metodo calcula la distancia con Haversine (Formula matematica para calcular una distancia me diante Latitud y Longitud)
+     * @param lat1 aporta datos lat1
+     * @param lng1 aporta datos long1
+     * @param lat2 aporta datos lat2
+     * @param lng2 aporta datos long2
+     * @return distancia
+     */
     private double calculateDistance(double lat1, double lng1, double lat2, double lng2) {
         // Radio de la Tierra en kilómetros
         double earthRadius = 6371.0;
@@ -125,6 +145,15 @@ public class GeoNamesService {
 
         return distance;
     }
+
+    /**
+     * el metodo calcula la diferencia de distancias
+     * @param myLat Tú latitud
+     * @param myLng Tú longitud
+     * @param placeLat latitud de la ubicacion deseada
+     * @param placeLng longitud de la ubicacion deseada
+     * @return Diferencia de distancia entre El usuario y la ubicacion deseada
+     */
     public double calculateDistanceDifference(double myLat, double myLng, double placeLat, double placeLng) {
         double myDistance = calculateDistance(myLat, myLng, placeLat, placeLng);
         double placeDistance = calculateDistance(placeLat, placeLng, placeLat, placeLng);
