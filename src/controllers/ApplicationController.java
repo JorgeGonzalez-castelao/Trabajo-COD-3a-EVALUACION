@@ -1,9 +1,9 @@
 // ApplicationController.java
-package geonames.controllers;
+package controllers;
 
-import geonames.database.Database;
-import geonames.models.Place;
-import geonames.services.GeoNamesService;
+import database.Database;
+import models.Place;
+import services.GeoNamesService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,10 @@ public class ApplicationController {
     private List<String> searchHistory;
     private Database database;
 
+    /**
+     * Constructor
+     * @param username -> Nombre de usuario para acceder a la base de datos
+     */
     public ApplicationController(String username) {
         geoNamesService = new GeoNamesService(username);
         favorites = new ArrayList<>();

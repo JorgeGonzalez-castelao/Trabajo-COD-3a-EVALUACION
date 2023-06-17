@@ -1,4 +1,4 @@
-package geonames.models;
+package models;
 
 public class Place {
     private int geonameId;
@@ -6,6 +6,15 @@ public class Place {
     private double latitude;
     private double longitude;
     private double distance;
+
+    /**
+     *
+     * @param geonameId ID usuario
+     * @param name nombre Comunidad / Pronvicia / Ciudad / Lugar emblematico
+     * @param latitude indica coordenadas
+     * @param longitude indica coordenadas
+     * @param distance indica distancia
+     */
 
     public Place(int geonameId, String name, double latitude, double longitude, double distance) {
         this.geonameId = geonameId;
@@ -16,7 +25,6 @@ public class Place {
     }
 
     // Getters and setters
-
     public int getGeonameId() {
         return geonameId;
     }
