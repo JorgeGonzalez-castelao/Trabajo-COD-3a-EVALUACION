@@ -38,7 +38,6 @@ public class View extends JFrame {
         createHistoryTable();
     }
 
-
     private JPanel createSearchPanel() {
         JPanel searchPanel = new JPanel();
         searchPanel.setLayout(new FlowLayout());
